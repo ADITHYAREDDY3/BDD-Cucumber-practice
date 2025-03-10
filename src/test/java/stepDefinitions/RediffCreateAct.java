@@ -47,7 +47,7 @@ public class RediffCreateAct
 	    System.out.println("Male is selected");
 	    createaccount.selectCountry("India");
 	    System.out.println("Country is selected");
-	     createaccount.enterCapcha();
+	    //createaccount.enterCapcha();
 	    System.out.println("Capcha is entered");
 	}
 
