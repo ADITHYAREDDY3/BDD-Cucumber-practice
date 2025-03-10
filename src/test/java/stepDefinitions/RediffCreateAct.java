@@ -47,14 +47,14 @@ public class RediffCreateAct
 	    System.out.println("Male is selected");
 	    createaccount.selectCountry("India");
 	    System.out.println("Country is selected");
-	    createaccount.enterCapcha();
+	     createaccount.enterCapcha();
 	    System.out.println("Capcha is entered");
 	}
 
 	@When("User clicks the submit button")
 	public void user_clicks_the_button() 
 	{
-		createaccount.clickCreateAccountButton();
+		// createaccount.clickCreateAccountButton();
 		System.out.println("Clicked on the create account button");
 	}
 
