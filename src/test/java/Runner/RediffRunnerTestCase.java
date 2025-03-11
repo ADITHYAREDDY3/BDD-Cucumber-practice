@@ -8,7 +8,7 @@ import io.cucumber.testng.CucumberOptions;
 	                "src/test/resources/featureFiles/rediffCreateAcct.feature"
 				}
 , glue = { "stepDefinitions",
-				"hooks" }, plugin = { "pretty", "html:Reports/cucumber-reports.html", "json:target/cucumber-reports/Cucumber.json" })
+				"hooks" }, plugin = { "pretty", "html:Reports/cucumber-reports.html", "json:target/cucumber.json" })
 
 public class RediffRunnerTestCase extends AbstractTestNGCucumberTests {
 
