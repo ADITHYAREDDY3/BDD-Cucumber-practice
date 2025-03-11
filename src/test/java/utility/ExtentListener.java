@@ -1,7 +1,9 @@
+package utility;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.testng.*;
 
@@ -15,13 +17,13 @@ public class ExtentListener implements ITestListener {
 
     // Setup Extent Report configuration
     public void onStart(ITestContext context) {
-        ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("extent-report.html");
-        htmlReporter.config().setDocumentTitle("Automation Report");
-        htmlReporter.config().setReportName("Functional Test Report");
-        htmlReporter.config().setTheme(Theme.STANDARD);
+        ExtentSparkReporter sparkReporter = new ExtentSparkReporter("extent-report.html");
+        sparkReporter.config().setDocumentTitle("Automation Report");
+        sparkReporter.config().setReportName("Functional Test Report");
+        sparkReporter.config().setTheme(Theme.STANDARD);
 
         extent = new ExtentReports();
-        extent.attachReporter(htmlReporter);
+        extent.attachReporter(sparkReporter);  // Corrected
         extent.setSystemInfo("Host Name", "LocalHost");
         extent.setSystemInfo("Environment", "QA");
         extent.setSystemInfo("User", "Tester");
